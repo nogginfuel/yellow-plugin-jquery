@@ -1,4 +1,4 @@
-Fotorama plugin 0.1.1
+jQuery plugin 0.1.1
 ========================
 Add the power of jQuery to Yellow.
 __Currently Experimental__
