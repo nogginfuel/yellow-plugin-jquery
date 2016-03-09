@@ -1,7 +1,6 @@
-jQuery plugin 0.1.1
-========================
+jQuery plugin 0.6.1
+===================
 Add the power of jQuery to Yellow.
-__Currently Experimental__
 
 How do I install this?
 ----------------------
@@ -11,11 +10,13 @@ How do I install this?
 To uninstall delete the plugin.
 
 How to use jQuery?
---------------------------------
-jQuery is loaded as a [CDN](https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js). The version currently used in this plugin is 1.11.1 as of 2015/07/20.
+------------------
+This plugin provides [jQuery v1.1.1](http://http://jquery.com/), which is a JavaScript library for cross-browser development. Files are served from [cdnjs](https://cdnjs.com), you can configure a different CDN or your own server.
 
-All known jQuery functionality for version 1.11.1 is available. If you are unsure, please check [jQuery's site](http://http://jquery.com/).
+To use a different CDN or jQuery version open file `system/config/config.ini` and add `JqueryCdn: https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/`. This will affect the entire website.
+
+All known jQuery functionality is available. If you are unsure, please check [jQuery's site](http://http://jquery.com/).
 
 Feedback
----------------
-All Feedback is appreciated.
+--------
+All feedback is appreciated.
