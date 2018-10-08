@@ -1,35 +1,29 @@
 <?php
-// Copyright (c) 2015-2016 Jef Lippiatt, http://nogginfuel.com
+// Jquery 3.3.1 plugin, https://github.com/nibreh/yellow-plugin-jquery
+// Copyright (c) 2018 nogginfuel, update by Juh Nibreh
 // This file may be used and distributed under the terms of the public license.
 
-// jQuery plugin
-class YellowJquery
-{
-	const Version = "0.1.2";
-	var $yellow;			//access to API
-	
-	// Handle initialisation
-	function onLoad($yellow)
-	{
-		$this->yellow = $yellow;
-		if(!$this->yellow->config->isExisting("jqueryCdn"))
-		{
-			$this->yellow->config->setDefault("jqueryCdn", "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/");
+class YellowJquery {
+    const VERSION = "0.7.7";
+    public $yellow;         //access to API
+    
+    // Handle initialisation
+    public function onLoad($yellow) {
+        $this->yellow = $yellow;
+        if(!$this->yellow->config->isExisting("jQuery")) {
+			$this->yellow->config->setDefault("jQuery", "https://code.jquery.com/jquery-3.3.1.min.js");
 		}
-	}
-	
-	// Handle page extra HTML data
-	function onExtra($name)
-	{
-		$output = NULL;
-		if($name == "header")
-		{
-			$jqueryCdn = $this->yellow->config->get("jqueryCdn");
-			$output .= "<script type=\"text/javascript\" src=\"{$jqueryCdn}jquery.min.js\"></script>\n";
-		}
-		return $output;
-	}
+    }
+    
+    // Handle page extra HTML data
+    public function onExtra($name) {
+        $output = null;
+        if ($name == "header") {
+			$jquery = $this->yellow->config->get("jQuery");
+			$output .= "<script type=\"text/javascript\" src=\"{$jquery}\"></script>\n";
+        }
+        return $output;
+    }
 }
 
-$yellow->plugins->register("jquery", "YellowJquery", YellowJquery::Version);
-?>
+$yellow->plugins->register("Jquery", "YellowJquery", YellowJquery::VERSION);
