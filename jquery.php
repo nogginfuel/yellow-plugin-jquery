@@ -18,7 +18,7 @@ class YellowJquery {
     // Handle page extra HTML data
     public function onExtra($name) {
         $output = null;
-        if ($name == "footer") {
+        if ($name == "header") {
 			$jquery = $this->yellow->config->get("jQuery");
 			$output .= "<script type=\"text/javascript\" src=\"{$jquery}\"></script>\n";
         }
