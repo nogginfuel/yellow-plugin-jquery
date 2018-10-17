@@ -26,4 +26,4 @@ class YellowJquery {
     }
 }
 
-$yellow->plugins->register("Jquery", "YellowJquery", YellowJquery::VERSION);
+$yellow->plugins->register("jquery", "YellowJquery", YellowJquery::VERSION);
